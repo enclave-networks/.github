@@ -8,24 +8,18 @@ assignees: ''
 
 ---
 
-Story Summary
--------------
+# Feature
+
+- Link back to the high-level Product Research which is generating this engineering story.
+
+# Story Summary
 
 Overview of the story; what do we need to achieve with this story.
 
-Feature
--------
-
-- Link to the high-level Product Feature that generated the story.
-
-Related Research
-----------------
+# Related Research
 
 - Link to any related Product Research.
 
-Requirements
-------------
+# Requirements
 
 - Detailed requirements of the story (as much as needed).
-- Another requirement
-- ...and so on.
