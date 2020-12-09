@@ -2,7 +2,6 @@
 name: Product Research
 about: An issue for tracking UX and Market research, generated from Features and feeding into Stories.
 title: Research Title
-labels: enhancement
 assignees: ''
 
 ---
