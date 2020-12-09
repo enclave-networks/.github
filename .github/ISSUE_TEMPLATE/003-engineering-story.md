@@ -7,18 +7,18 @@ assignees: ''
 
 ---
 
-# Feature
+# {{Title}}
 
-- Link back to the high-level Product Research which is generating this engineering story.
+Parent product research: [Link back to the parent product research](0)
 
-# Story Summary
+## Story Summary
 
 Overview of the story; what do we need to achieve with this story.
 
-# Related Research
+## Related Research
 
 - Link to any related Product Research.
 
-# Requirements
+## Requirements
 
 - Detailed requirements of the story (as much as needed).
