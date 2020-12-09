@@ -7,47 +7,40 @@ assignees: ''
 
 ---
 
-Bug Description
----------------
+# Bug Description
 
 A clear and concise description of what the bug is.
 
-Story
------
+# Story
 
 Is this bug related to a particular story? If so, link it here.
 
-Affected Components
--------------------
+# Affected Components
 
 Fabric/Portal/Network SaaS
 
-To Reproduce
--------------
+# Steps to Reproduce
+
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-Environment
------------
+# Environment
 
 - Version of Enclave Agent the issue was found in, or the build of the services.
 - OS Version (if applicable)
 - Browser (if applicable)
 
-Expected behavior
------------------
+# Expected behavior
 
 A clear and concise description of what you expected to happen.
 
-Screenshots
------------
+# Screenshots
 
 If applicable, add screenshots to help explain the problem.
 
-Additional context
-------------------
+# Additional context
 
 Add any other context about the problem here.
