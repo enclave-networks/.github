@@ -18,3 +18,7 @@ Overview of the story; what do we need to achieve with this story.
 ## Requirements
 
 - Detailed requirements of the story (as much as needed).
+
+## Research
+
+- Link directly to the outputs of any supporting or related research.
