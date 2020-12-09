@@ -3,7 +3,6 @@ name: Engineering Story
 about: A granular issue for tracking roadmap development at an Engineering level.
   Generated from high-level Product Features.
 title: Story Title
-labels: enhancement
 assignees: ''
 
 ---
