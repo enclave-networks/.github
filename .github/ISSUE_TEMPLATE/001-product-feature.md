@@ -2,7 +2,6 @@
 name: Product Feature
 about: A high-level request for functionality for the product.
 title: Feature Title
-labels: enhancement
 assignees: ''
 
 ---
