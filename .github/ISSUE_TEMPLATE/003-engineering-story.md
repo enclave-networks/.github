@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-# {{Title}}
-
 Parent product research: [Link back to the parent product research](0)
 
 ## Story Summary
