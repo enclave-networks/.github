@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-# {{Title}}
-
 A clear and concise description of what the bug is.
 
 ## Story
