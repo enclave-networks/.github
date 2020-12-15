@@ -6,8 +6,6 @@ assignees: ''
 
 ---
 
-# {{Title}}
-
 Parent product feature: [Link back to the parent product feature](0)
 
 ## Research Summary
