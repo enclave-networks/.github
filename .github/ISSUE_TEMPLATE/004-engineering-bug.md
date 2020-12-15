@@ -33,7 +33,7 @@ Steps to reproduce the behavior:
 - OS Version (if applicable)
 - Browser (if applicable)
 
-## Expected behavior
+## Expected behaviour
 
 A clear and concise description of what you expected to happen.
 
