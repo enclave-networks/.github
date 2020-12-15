@@ -6,8 +6,6 @@ assignees: ''
 
 ---
 
-# {{Title}}
-
 - **Persona or stakeholder**: E.g. As an account owner...
 - **Qualifier**: (if needed) E.g. Working in a team environment
 - **I want**: E.g. to create multiple admin accounts
