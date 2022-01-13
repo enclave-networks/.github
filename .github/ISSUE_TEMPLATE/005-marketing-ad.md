@@ -1,10 +1,9 @@
 ---
 name: Marketing Advert
-about: Create an inbound marketing advert
-title: Ad: 
+about: Create an inbound marketing advert.
+title: Ad
 labels: advert-linkedin
 assignees: ''
-
 ---
 
 # Headline
