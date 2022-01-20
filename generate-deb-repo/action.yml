@@ -1,0 +1,64 @@
+name: 'Generate Deb Repo'
+inputs:
+  packageLocation:
+    description: 'Where the deb files are stored'
+    required: true
+    default: 'debs'
+  fabricChannel:
+    required: true
+  aws-s3-access-key-id:
+    required: true
+  aws-s3-secret-access-key:
+    required: true
+  private_package_access_token:
+    required: true
+  deb_package_gpg_key:
+    required: true
+  deb_package_gpg_passphrase:
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Docker
+      run: |
+        echo "${{ inputs.private_package_access_token }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        docker pull docker.pkg.github.com/enclave-networks/container.deb-repo/enclave.deb-repo:latest
+      shell: bash
+
+    - name: Create temp resources for docker
+      run: |
+        mkdir deb-repo
+        echo ${{inputs.deb_package_gpg_key}} | base64 --decode > enclave.key
+        echo ${{inputs.deb_package_gpg_passphrase}} > enclave.key.passphrase
+      shell: bash
+
+    - name: Update Deb Package
+      run: |
+        docker run --rm --name deb-repo \
+        -v "${PWD}/deb-repo":/home/freight/repo \
+        -v "/pkg/deb-repo-cache":/home/freight/lib \
+        -v "${PWD}/${{ inputs.packageLocation }}":/home/freight/debs \
+        -v "${PWD}/enclave.key":/private/enclave.key \
+        -v "${PWD}/enclave.key.passphrase":/private/enclave.key.passphrase \
+        -e ENCLAVE_CHANNEL="${{inputs.fabricChannel}}" \
+        -t docker.pkg.github.com/enclave-networks/container.deb-repo/enclave.deb-repo:latest
+      shell: bash
+
+    - name: Create list files
+      run: |
+        echo "deb https://enclave-package-testing.s3.eu-west-2.amazonaws.com/apt stable main" | tee deb-repo/enclave.stable.list
+        echo "deb https://enclave-package-testing.s3.eu-west-2.amazonaws.com/apt unstable main" | tee deb-repo/enclave.unstable.list
+        mv enclave.key deb-repo/enclave.stable.gpg
+        cp deb-repo/enclave.stable.gpg deb-repo/enclave.unstable.gpg
+      shell: bash
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ inputs.aws-s3-access-key-id }}
+        aws-secret-access-key: ${{ inputs.aws-s3-secret-access-key }}
+        aws-region: eu-west-2
+
+    - name: Upload Packages to S3
+      run: s3cmd sync --follow-symlinks --acl-public --delete-removed deb-repo/ s3://enclave-package-testing/apt/
+      shell: bash

@@ -1,0 +1,52 @@
+name: 'Generate Rpm Repo'
+inputs:
+  packageLocation:
+    description: 'Where the rpm files are stored'
+    required: true
+    default: 'build/rpm'
+  fabricChannel:
+    required: true
+  aws-s3-access-key-id:
+    required: true
+  aws-s3-secret-access-key:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Createrepo
+      run: sudo dnf install createrepo s3cmd -y
+      shell: bash
+
+    - name: Move RPM Files to Repo
+      run: |
+        cp ${{inputs.packageLocation}}/*.armv7l.rpm /pkg/rpm-repo-cache/packages/armv7l/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.aarch64.rpm /pkg/rpm-repo-cache/packages/aarch64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.x86_64.rpm /pkg/rpm-repo-cache/packages/x86_64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.noarch.rpm /pkg/rpm-repo-cache/packages/x86_64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.armv7l.rpm /pkg/rpm-repo-cache/rpmrepo/armv7l/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.aarch64.rpm /pkg/rpm-repo-cache/rpmrepo/aarch64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.x86_64.rpm /pkg/rpm-repo-cache/rpmrepo/x86_64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/*.noarch.rpm /pkg/rpm-repo-cache/rpmrepo/x86_64/${{inputs.fabricChannel}}/ > /dev/null || :
+        cp ${{inputs.packageLocation}}/enclave.repo /pkg/rpm-repo-cache/rpmrepo/enclave.repo > /dev/null || :
+        cp ${{inputs.packageLocation}}/enclave-networks.rpm.key /pkg/rpm-repo-cache/rpmrepo/enclave-networks.rpm.key > /dev/null || :
+      shell: bash
+
+    - name: Update Repos
+      run: |
+        createrepo --update /pkg/rpm-repo-cache/rpmrepo/armv7l/${{inputs.fabricChannel}}
+        createrepo --update /pkg/rpm-repo-cache/rpmrepo/aarch64/${{inputs.fabricChannel}}
+        createrepo --update /pkg/rpm-repo-cache/rpmrepo/x86_64/${{inputs.fabricChannel}}
+        createrepo --update /pkg/rpm-repo-cache/rpmrepo/noarch/${{inputs.fabricChannel}}
+      shell: bash
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ inputs.aws-s3-access-key-id }}
+        aws-secret-access-key: ${{ inputs.aws-s3-secret-access-key }}
+        aws-region: eu-west-2
+
+    - name: Upload Packages to S3
+      run: s3cmd sync --follow-symlinks --acl-public --delete-removed /pkg/rpm-repo-cache/rpmrepo/ s3://enclave-package-testing/rpm/
+      shell: bash
