@@ -19,7 +19,7 @@ Fabric/Portal/Network SaaS
 
 ## Steps to Reproduce
 
-Steps to reproduce the behavior:
+Steps to reproduce the behaviour:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
