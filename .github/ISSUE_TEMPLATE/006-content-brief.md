@@ -1,3 +1,11 @@
+---
+name: Content Brief
+about: Create a content brief.
+title: Content Brief
+labels: Content
+assignees: ''
+---
+
 ## Title or suggested Title
 
 Brief overview or descriptive title that outlines the content
