@@ -6,30 +6,42 @@ labels: Content
 assignees: ''
 ---
 
-## Title or suggested Title
+## Title or suggested title
 
 Brief overview or descriptive title that outlines the content
 
-## Due Date
+## Initial draft due date
 
-First draft due by xx/xx
+First draft due by xx/xx/xxxx
 
-## Length
+## Expected length
 
-Depending on the type of post, this might be 1000+ for a long form blog, or under 500 for a LinkedIn post
+Depending on the type of content, this might be 1000+ words for a long form blog, or sub 500 for social media
 
-## Summary of Topic
+## Summary of topic
 
 Which theme of our content this fits in to - compliance, security, product, Tutorial, ZT, promiseland, or documentation
 
-## Supporting Content
+## Content goal
 
-URL from the content idea backlog that inspired the piece along with any supporting links to use for citation
+What is this copy written to achieve, what is its purpose?
 
-## Keywords to Include
+## Target audience
+
+Describe the target audience
+
+## Main call to action
+
+If appropriate, what call to action should this copy include?
+
+## Keywords
 
 Max 3-5 keywords or long tail phrases to include
 
 ## Media Required
 
-If we need a blog or social media image this can be assigned to Dan
+Does this copy require artwork? Be sure to @CC the creative the team
+
+## Supporting examples
+
+URLs from the content idea backlog that inspired the piece along with any supporting links that may be useful for citation
