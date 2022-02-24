@@ -38,9 +38,9 @@ If appropriate, what call to action should this copy include?
 
 Max 3-5 keywords or long tail phrases to include
 
-## Media Required
+## Artwork required
 
-Does this copy require artwork? Be sure to @CC the creative the team
+Does this copy require artwork? Be sure to @CC the creative the team if so
 
 ## Supporting examples
 
