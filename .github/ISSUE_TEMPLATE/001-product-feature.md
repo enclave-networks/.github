@@ -40,3 +40,7 @@ E.g. Anticipating integration with X or Y.
 ## Assets
 
 Any relevant external content (i.e. google docs, images, etc.).
+
+## MVP Documentation Requirements
+
+What minimum documentation set is required for launch of this feature?
