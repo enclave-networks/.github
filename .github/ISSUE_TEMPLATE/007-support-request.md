@@ -18,7 +18,7 @@ Field | Value
 
 ## Problem
 
-A clear and concise description of what the customer or parnter experienced.
+A clear and concise description of what the customer or partner experienced.
 
 ## Expected behaviour
 
