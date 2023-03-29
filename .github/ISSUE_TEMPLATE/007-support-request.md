@@ -10,11 +10,11 @@ assignees: ''
 Field | Value
 --|--
 **Partner name:** | 
-**Customer name:** |
-**Reported on:** |
-**Urgency:** |
-**Impact:** |
-**Criticality:** | P1 / P2 / P3
+**Customer name:** | 
+**Reported on:** | 
+**Urgency:** | 
+**Impact:** | 
+**Criticality:** | 
 
 ## Problem
 
@@ -46,8 +46,6 @@ If applicable, add screenshots to help explain the problem.
 
 Add any other context about the problem here.
 
-
 ## Linked engineering issues
 
 - [ ] Example issue #1
-- [ ] Example issue #2
