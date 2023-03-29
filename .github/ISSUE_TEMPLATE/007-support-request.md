@@ -7,17 +7,14 @@ assignees: ''
 
 ---
 
-Partner name:
-
-Customer name:
-
-Reported on:
-
-Urgency:
-
-Impact:
-
-Criticality: [P1 | P2 | P3]
+Field | Value
+--|--
+**Partner name:** | 
+**Customer name:** |
+**Reported on:** |
+**Urgency:** |
+**Impact:** |
+**Criticality:** | P1 / P2 / P3
 
 ## Problem
 
