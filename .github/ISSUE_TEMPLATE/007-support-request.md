@@ -48,4 +48,4 @@ Add any other context about the problem here.
 
 ## Linked engineering issues
 
-- [ ] Example issue #1
+- [ ] Example issue
