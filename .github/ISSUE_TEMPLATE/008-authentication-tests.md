@@ -1,3 +1,12 @@
+---
+name: Authentication Tests
+about: Track progress against a set of authentication tests.
+title: Authentication Tests
+labels: 
+assignees: ''
+
+---
+
 ### Windows
 
 - [ ] Log in button appears when a single trust requirement is added.
