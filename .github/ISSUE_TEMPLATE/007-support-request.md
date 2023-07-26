@@ -1,6 +1,6 @@
 ---
 name: Customer Support Request
-about: Track issues raised by customers
+about: Track issues raised by customers.
 title: Describe the problem
 labels: 
 assignees: ''
