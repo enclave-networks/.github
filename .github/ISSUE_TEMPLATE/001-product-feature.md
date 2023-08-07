@@ -9,7 +9,7 @@ assignees: ''
 - **Persona or stakeholder**: E.g. As an account owner...
 - **Qualifier**: (if needed) E.g. Working in a team environment
 - **I want**: E.g. to create multiple admin accounts
-- **Why?**: E.g. because I want to follow security best practices.
+- **Why**: E.g. because I want to follow security best practices
 
 ## Reasoning
 
