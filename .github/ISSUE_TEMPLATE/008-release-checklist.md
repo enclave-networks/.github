@@ -10,13 +10,15 @@ assignees: ''
 # Release Checklist
 
 - [ ] Completed Pulumi end-to-end tests successfully (see [README](https://github.com/enclave-networks/fabric/tree/develop/tests/EndToEnd))
-- [ ] Test WinARM64 (build VM in Azure on Windows 11 and test manually)
 
 ## Windows
 
-- [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
+- Architectures
+    - [ ] Runs on Windows X64
+    - [ ] Runs on Windows ARM64 (build VM in Azure on Windows 11 and test manually)
 - [ ] Can be successfully upgraded from an earlier enrolled version
-- [ ] Sucessfully runs the unattended installer
+- [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
+- [ ] Successfully runs the unattended installer
 - [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Responds to start, stop and run operations
@@ -25,20 +27,19 @@ assignees: ''
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the system
 - [ ] DNS stub resolver works
+- [ ] Self-test verb passes all tests
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully
+- [ ] System can be revoked successfully
 
 ## Linux tests
 
 - APT 
     - [ ] Runs on Ubuntu 20.04
     - [ ] Runs on Ubuntu 22.04
-    - [ ] Runs on RaspberryPi
+    - [ ] Runs on Ubuntu 24.04
+    - [ ] Runs on RaspberryPi (arm64 aka "aarch64")
 - RPM
     - [ ] Runs on CentOS (latest)
-- [ ] Runs on arm64
-- [ ] Runs on Windows ARM64
-- [ ] Runs on Windows X64
 - [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Responds to start, stop and run operations
@@ -47,10 +48,12 @@ assignees: ''
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the system
 - [ ] DNS stub resolver works
+- [ ] Self-test verb passes all tests
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully
+- [ ] System can be revoked successfully
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] Functions as a Gateway for 0.0.0.0/0
 
 ## MacOS
 
@@ -63,26 +66,31 @@ assignees: ''
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the system
 - [ ] DNS stub resolver works
+- [ ] Self-test verb passes all tests
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully
+- [ ] System can be revoked successfully
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] Test Docker for Mac (Note: we don't presently test here, see also https://github.com/enclave-networks/docs/issues/183)
 
 ## Docker
 
-- [ ] Container runs on Synology NAS
-- [ ] Container runs on WSL2
-- [ ] Container runs on Ubuntu 22.04
+- Architectures
+    - [ ] Container runs on Synology NAS
+    - [ ] Container runs on WSL2
+    - [ ] Container runs on Ubuntu 22.04
+- [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Peer-to-peer connections are established
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the system
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully
+- [ ] System can be revoked successfully
 
 ## Android
 
+- [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Responds to start, stop and run operations
 - [ ] Peer-to-peer connections are established
@@ -91,10 +99,11 @@ assignees: ''
 - [ ] Trust requirements require login
 - [ ] Login flow completes successfully
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully 
+- [ ] System can be revoked successfully 
 
 ## iOS
 
+- [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Responds to start, stop and run operations
 - [ ] Peer-to-peer connections are established
@@ -103,7 +112,7 @@ assignees: ''
 - [ ] Trust requirements require login
 - [ ] Login flow completes successfully
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked sucessfully
+- [ ] System can be revoked successfully
 
 # Key Feature Testing
 
@@ -127,7 +136,7 @@ assignees: ''
 - [ ] Microsoft
 - [ ] OIDC
 
-## Autentication
+## Authentication
 
 ### Windows
 
@@ -178,3 +187,7 @@ assignees: ''
 - [ ] Scheduler refreshes when an access token expires (with the UI closed).
 - [ ] Removing a trust requirement should not discard the token.
 - [ ] When authority/tenant ID on policy changes, silent login attempted with new authority, followed by presenting login button if necessary.
+
+---
+
+Mark any failing tests with **(!! BUG BUG BUG)** and link to the relevant issue which tracks the bug.
