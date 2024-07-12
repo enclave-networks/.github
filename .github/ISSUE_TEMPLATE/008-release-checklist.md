@@ -59,21 +59,19 @@ assignees: ''
 # Key Feature Testing
 
 - [ ] Test DNS automatic name registration
-
 - [ ] Test performance to Azure Files and as an Internet Gateway (capture before and after). Benchmark on a `D2_v3`
-
 - [ ] Verify serial number information is stored in the platform database
 
 ## Enclave Gateway
 
 - [ ] Test Gateway DNS is forwarding and answering 
-- Test Gateway priority
-      - [ ] Preferred
-      - [ ] Geographic
-      - [ ] Ordered
-      - [ ] Check that system gateway preferences take effect immediately
-      - [ ] Check that policy re-ordering takes effect immediately
-      - [ ] Check that gateways are correctly chosen by geography
+- [ ] Test Gateway priority
+    - [ ] Preferred
+    - [ ] Geographic
+    - [ ] Ordered
+    - [ ] Check that system gateway preferences take effect immediately
+    - [ ] Check that policy re-ordering takes effect immediately
+    - [ ] Check that gateways are correctly chosen by geography
 
 ## Authentication Providers
 
