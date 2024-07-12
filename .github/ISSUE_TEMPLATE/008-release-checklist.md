@@ -9,7 +9,7 @@ assignees: ''
 
 # Release Checklist
 
-- [ ] Completed Pulumi end-to-end tests successfully
+- [ ] Completed Pulumi end-to-end tests successfully (see [README](https://github.com/enclave-networks/fabric/tree/develop/tests/EndToEnd))
 - [ ] Peer-to-peer connections are established
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the endpoint
@@ -18,6 +18,7 @@ assignees: ''
 - [ ] Successful enrolment with general use keys
 - [ ] Successful enrolment with ephemeral keys
 - [ ] DNS stub resolver works
+- [ ] Test WinARM64 (build VM in Azure on Windows 11 and test manually)
 
 ## Windows
 
@@ -33,6 +34,7 @@ assignees: ''
 - APT 
     - [ ] Runs on Ubuntu 20.04
     - [ ] Runs on Ubuntu 22.04
+    - [ ] Runs on RaspberryPi
 - RPM
     - [ ] Runs on CentOS (latest)
 - [ ] Runs on arm64
@@ -48,6 +50,7 @@ assignees: ''
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] DNS stub resolver works
+- [ ] Test Docker for Mac (Note: we don't presently test here, see also https://github.com/enclave-networks/docs/issues/183)
 
 ## Docker
 
@@ -55,6 +58,10 @@ assignees: ''
 - [ ] Container runs on WSL2
 - [ ] Container runs on Ubuntu 22.04
 - [ ] Can be successfully upgraded from an earlier enrolled version
+
+## Android
+
+## iOS
 
 # Key Feature Testing
 
