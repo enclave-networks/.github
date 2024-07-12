@@ -10,24 +10,23 @@ assignees: ''
 # Release Checklist
 
 - [ ] Completed Pulumi end-to-end tests successfully (see [README](https://github.com/enclave-networks/fabric/tree/develop/tests/EndToEnd))
-- [ ] Peer-to-peer connections are established
-- [ ] Relay connections are established
-- [ ] Policy changes are propagated to the endpoint
-- [ ] Systems can be disabled and re-enabled
-- [ ] Systems can be revoked sucessfully
-- [ ] Successful enrolment with general use keys
-- [ ] Successful enrolment with ephemeral keys
-- [ ] DNS stub resolver works
 - [ ] Test WinARM64 (build VM in Azure on Windows 11 and test manually)
 
 ## Windows
 
-- [ ] Responds to start, stop and run operations
-- [ ] Can successfully switch between profiles
+- [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
 - [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] Sucessfully runs the unattended installer
-- [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
+- [ ] Successful enrolment with general use key
+- [ ] Successful enrolment with ephemeral key
+- [ ] Responds to start, stop and run operations
+- [ ] Can successfully switch between profiles
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
 - [ ] DNS stub resolver works
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully
 
 ## Linux tests
 
@@ -40,16 +39,34 @@ assignees: ''
 - [ ] Runs on arm64
 - [ ] Runs on Windows ARM64
 - [ ] Runs on Windows X64
+- [ ] Successful enrolment with general use key
+- [ ] Successful enrolment with ephemeral key
+- [ ] Responds to start, stop and run operations
+- [ ] Can successfully switch between profiles
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
+- [ ] DNS stub resolver works
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
-- [ ] DNS stub resolver works
 
 ## MacOS
 
-- [ ] Pkg file is successfully installed 
+- [ ] Pkg file is successfully installed
+- [ ] Successful enrolment with general use key
+- [ ] Successful enrolment with ephemeral key
+- [ ] Responds to start, stop and run operations
+- [ ] Can successfully switch between profiles
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
+- [ ] DNS stub resolver works
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
-- [ ] DNS stub resolver works
 - [ ] Test Docker for Mac (Note: we don't presently test here, see also https://github.com/enclave-networks/docs/issues/183)
 
 ## Docker
@@ -57,11 +74,36 @@ assignees: ''
 - [ ] Container runs on Synology NAS
 - [ ] Container runs on WSL2
 - [ ] Container runs on Ubuntu 22.04
-- [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] Successful enrolment with ephemeral key
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully
 
 ## Android
 
+- [ ] Successful enrolment with ephemeral key
+- [ ] Responds to start, stop and run operations
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
+- [ ] Trust requirements require login
+- [ ] Login flow completes successfully
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully 
+
 ## iOS
+
+- [ ] Successful enrolment with ephemeral key
+- [ ] Responds to start, stop and run operations
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the system
+- [ ] Trust requirements require login
+- [ ] Login flow completes successfully
+- [ ] System can be disabled and re-enabled
+- [ ] System can be revoked sucessfully
 
 # Key Feature Testing
 
