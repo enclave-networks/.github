@@ -1,11 +1,86 @@
 ---
-name: Authentication Tests
-about: Track progress against a set of authentication tests.
-title: Authentication Tests
+name: Release Checklist
+about: Track testing progress against a pre-defined checklist.
+title: Release Checklist
 labels: 
 assignees: ''
 
 ---
+
+# Release Checklist
+
+- [ ] Completed Pulumi end-to-end tests successfully
+- [ ] Peer-to-peer connections are established
+- [ ] Relay connections are established
+- [ ] Policy changes are propagated to the endpoint
+- [ ] Systems can be disabled and re-enabled
+- [ ] Systems can be revoked sucessfully
+- [ ] Successful enrolment with general use keys
+- [ ] Successful enrolment with ephemeral keys
+- [ ] DNS stub resolver works
+
+## Windows
+
+- [ ] Responds to start, stop and run operations
+- [ ] Can successfully switch between profiles
+- [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] Sucessfully runs the unattended installer
+- [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
+- [ ] DNS stub resolver works
+
+## Linux tests
+
+- APT 
+    - [ ] Runs on Ubuntu 20.04
+    - [ ] Runs on Ubuntu 22.04
+- RPM
+    - [ ] Runs on CentOS (latest)
+- [ ] Runs on arm64
+- [ ] Runs on Windows ARM64
+- [ ] Runs on Windows X64
+- [ ] Enclave auth verb works as expected
+- [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] DNS stub resolver works
+
+## MacOS
+
+- [ ] Pkg file is successfully installed 
+- [ ] Enclave auth verb works as expected
+- [ ] Can be successfully upgraded from an earlier enrolled version
+- [ ] DNS stub resolver works
+
+## Docker
+
+- [ ] Container runs on Synology NAS
+- [ ] Container runs on WSL2
+- [ ] Container runs on Ubuntu 22.04
+- [ ] Can be successfully upgraded from an earlier enrolled version
+
+# Key Feature Testing
+
+- [ ] Test DNS automatic name registration
+
+- [ ] Test performance to Azure Files and as an Internet Gateway (capture before and after). Benchmark on a `D2_v3`
+
+- [ ] Verify serial number information is stored in the platform database
+
+## Enclave Gateway
+
+- [ ] Test Gateway DNS is forwarding and answering 
+- Test Gateway priority
+      - [ ] Preferred
+      - [ ] Geographic
+      - [ ] Ordered
+      - [ ] Check that system gateway preferences take effect immediately
+      - [ ] Check that policy re-ordering takes effect immediately
+      - [ ] Check that gateways are correctly chosen by geography
+
+## Authentication Providers
+
+- [ ] Microsoft
+- [ ] OIDC
+
+## Autentication
 
 ### Windows
 
