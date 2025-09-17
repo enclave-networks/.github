@@ -9,13 +9,22 @@ assignees: ''
 
 # Release Checklist
 
+## Pull Request (merge `develop` to `master`)
+
+- 
+
+## End-to-end testing
+
 - [ ] Completed Pulumi end-to-end tests successfully (see [README](https://github.com/enclave-networks/fabric/tree/develop/tests/EndToEnd))
+
+Bugs:
+-  
 
 ## Windows
 
 - Architectures
-    - [ ] Runs on Windows X64
-    - [ ] Runs on Windows ARM64 (build VM in Azure on Windows 11 and test manually)
+    - [ ] Runs on Windows x64
+    - [ ] Runs on Windows arm64 (build VM in Azure on Windows 11 and test manually)
 - [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] Continues to operate following sleep, hibernate and resume operations on physical devices
 - [ ] Successfully runs the unattended installer
@@ -53,11 +62,11 @@ assignees: ''
 - [ ] System can be revoked successfully
 - [ ] Enclave auth verb works as expected
 - [ ] Can be successfully upgraded from an earlier enrolled version
-- [ ] Functions as a Gateway for 0.0.0.0/0
+- [ ] Functions as a Gateway for `0.0.0.0/0`
 
 ## MacOS
 
-- [ ] Pkg file is successfully installed
+- [ ] PKG file is successfully installed
 - [ ] Successful enrolment with general use key
 - [ ] Successful enrolment with ephemeral key
 - [ ] Responds to start, stop and run operations
@@ -66,7 +75,7 @@ assignees: ''
 - [ ] Relay connections are established
 - [ ] Policy changes are propagated to the system
 - [ ] DNS stub resolver works
-- [ ] Self-test verb passes all tests
+- [ ] Self-test verb passes all tests **(!! BUG BUG BUG)**
 - [ ] System can be disabled and re-enabled
 - [ ] System can be revoked successfully
 - [ ] Enclave auth verb works as expected
@@ -90,8 +99,9 @@ assignees: ''
 
 ## Android
 
+- [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] Successful enrolment with general use key
-- [ ] Successful enrolment with ephemeral key
+- [ ] Successful enrolment with ephemeral key **(!! BUG BUG BUG)**
 - [ ] Responds to start, stop and run operations
 - [ ] Peer-to-peer connections are established
 - [ ] Relay connections are established
@@ -99,12 +109,13 @@ assignees: ''
 - [ ] Trust requirements require login
 - [ ] Login flow completes successfully
 - [ ] System can be disabled and re-enabled
-- [ ] System can be revoked successfully 
+- [ ] System can be revoked successfully
 
 ## iOS
 
+- [ ] Can be successfully upgraded from an earlier enrolled version
 - [ ] Successful enrolment with general use key
-- [ ] Successful enrolment with ephemeral key
+- [ ] Successful enrolment with ephemeral key **(!! BUG BUG BUG)**
 - [ ] Responds to start, stop and run operations
 - [ ] Peer-to-peer connections are established
 - [ ] Relay connections are established
@@ -187,7 +198,3 @@ assignees: ''
 - [ ] Scheduler refreshes when an access token expires (with the UI closed).
 - [ ] Removing a trust requirement should not discard the token.
 - [ ] When authority/tenant ID on policy changes, silent login attempted with new authority, followed by presenting login button if necessary.
-
----
-
-Mark any failing tests with **(!! BUG BUG BUG)** and link to the relevant issue which tracks the bug.
